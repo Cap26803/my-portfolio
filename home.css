@@ -1,0 +1,225 @@
+body {
+  font-family: 'SF Pro Display';
+  margin: 0;
+  padding: 0;
+  color: #f8e8e8;
+  background-color: #000;
+}
+
+/* Completely remove green color */
+.navbar {
+  background-color: black; /* Set background color to transparent */
+  color: #fff; /* Set text color to white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease; /* Add transition effect to link color */
+}
+
+.navbar a:hover {
+  color: #ff0000; /* Change the link color on hover */
+}
+
+.navbar a.active {
+  align-items: center;
+  display: flex;
+  background-color:none; /* Change the active background color to black */
+}
+
+/* Additional CSS Styles */
+
+.hero-section,
+.about-content,
+.project-content,
+.contact-info {
+  min-height: 100vh;
+  /* Set each section to occupy the full viewport height */
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  /* Add this to stack the icons below the name */
+  justify-content: center;
+  align-items: center;
+  /* Set the background image URL or file path below */
+  background-image: url("assets/abstract.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #f8e8e8;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+/* Tech Stack section styling */
+.tech-stack {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.tech-stack ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-stack li {
+  display: inline-block;
+  margin: 10px;
+}
+
+.tech-stack img {
+  width: 40px;
+  height: 40px;
+  /* Adjust the size as needed */
+}
+.github-logo {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+}
+
+/* Add this CSS rule for the LinkedIn logo image */
+.linkedin-logo {
+  width: 45px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+}
+
+/* Add this CSS rule to display the social icons side by side */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px; /* Adjust the margin as needed */
+  margin-left: 10px;
+}
+
+/* Optional: Add spacing between the icons */
+.social-icons img {
+  margin-right: 20px; /* Adjust the spacing as needed */
+}
+/* Additional CSS Styles for Contact Section */
+
+.contact-info {
+  background-color: #000000;
+  color: #000000;
+  padding: 50px 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  color: rgb(0, 0, 0);
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.form-field input{
+  color: #000;
+}
+
+.form-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline:#000;
+}
+
+.form-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-button button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-button button:hover {
+  background-color: #068804;
+  color: #000;
+}
+
+.confirmation-message {
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Add this CSS to style the fixed navbar */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* home.css */
+/* ... Previous CSS ... */
+
+.project-block {
+  position: relative;
+  flex: auto;
+}
+
+.project-image {
+  position: relative;
+}
+
+.description-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  color: #fff;
+  font-size: 14px;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover .description-box {
+  visibility: visible; /* Show description box on hover */
+  opacity: 1; /* Fade in the description box on hover */
+}
